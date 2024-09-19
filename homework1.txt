@@ -1,0 +1,41 @@
+1. What is HTML? What does it do?
+   
+    HTML (Hypertext Markeup Language) is a markup language that takes elements and interprets them to visual elements on a web page. It is a set of rules that defines how the layout and presentation of text and images should appear in a digital document. It allows for the structuring of documents, adding of formatting, and the specifying of how different elements should be displayed on webpages. In short, it creates structure and gives users functionality to interact with.
+
+2. What is CSS? What does it do?
+
+    CSS stands for Cascading Style Sheets and controls the visual aspect of web pages and HTML. It is used to style web pages to make them more appealing and increase usability. CSS creates rules that specifies how content should appear.
+
+3. Access https://www.fordham.edu/. In your own words, describe how this webpage uses
+structure to convey meaning and navigation options to the user.
+
+    The Fordham University webpage uses a clean and hierarchical structure to guide users. At the top, there is a navigation bar with dropdown menus that allow easy access to key sections like "Academics," "Admissions," and "Research." Below the header, there are sections that feature announcements, news, and event highlights, organized in a grid layout for clear readability. The footer provides additional links to contact information, policies, and other resources. This structure helps users quickly find important information and navigate the site efficiently. 
+
+4. What is an HTML element? Tag? Attribute?
+    
+    An HTML element is a collection of start and end tags with the content inserted between them. This content is then formatted on the page depending on the element type. Each element tells the browser something about the information that sits between its opening and closing tags.
+    Tags act like containers so there is an opening tag '<p>' and a closing tag '</p>'. Enclosing content in tags will transform them when the html is interpreted. 
+    Attributes tell us more about elements so they provide additional information about the contents of an element. They have a name and a value. 
+
+5. What are the parts of a CSS rule?
+    
+    A CSS rule contains two parts: a selector and a declaration. CSS declarations are inside curly brackets and have a property and a value. CSS selectors are used to find the HTML elements you want to style. 
+
+6. Explain how CSS rules cascade.
+
+    CSS rules cascade with a specific precedence when two or more rules apply to the same element. The order in which they cascade is as follows:
+    1. Specificity - more specific selectors (such as using an ID instead of a class) will take precedence over less specific selectors
+    2. Inheritance - styles applied to a parent element will be inherited by its child elements unless overridden by a more specific style 
+    3. Last Rule - styles declared later in the stylesheet will take preceence over styles declared earlier unless they are overridden by a more specific style
+
+7. If you have a directory called project-1 that contains two subdirectories, html-files and
+images. In the html-files directory you have an HTML file called html-1.html that has an
+img element with a src attribute, write out the value of the src attribute to access an
+image file called pinecone.jpg in the images directory.
+
+    The value of the src attribute would be: 
+    <img src="../images/pinecone.jpg" alt="Pinecone">
+
+8. What is the default behavior when submitting a HTML form?
+
+    The default behavior when submitting a HTML form is to send the form data to the URL specified in the action attribute of the <form> element, using the method defined in the method attribute. If no action attribute is provided, the form data is sent to the same URL as the current page, causing the page to reload when the submitted data. 
