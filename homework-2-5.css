@@ -1,0 +1,114 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; 
+    display: flex; 
+    justify-content: flex-start; 
+    margin: 10px; 
+}
+
+.sidebar {
+    width: 30%; 
+    padding: 20px; 
+    height: 100vh; 
+    border-right: 1.5px solid rgb(223, 223, 223);
+}
+
+.content {
+    width: 75%; 
+    background-color: white; 
+    padding: 20px; 
+    margin-left: 5%;
+    margin-right: 20px; 
+}
+
+h1 {
+    color: maroon; 
+    font-size: 3em; 
+    margin-bottom: 40px;
+    margin-top: 50px;
+    font-weight: normal; 
+}
+
+.sidebar-box {
+    background-color: rgb(225, 224, 224);
+    padding: 10px; 
+    width: 85%; 
+}
+
+.sidebar h3 {
+    color: maroon; 
+    font-size: 1.3em; 
+    margin-bottom: 20px; 
+    margin-top: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none; 
+}
+
+.sidebar ul li a {
+    text-decoration: none; 
+    color: black; 
+    font-size: 1em; 
+    padding: 10px; 
+    display: block; 
+}
+
+.sidebar-button-link {
+    background-color: maroon; 
+    color: white; 
+    padding: 20px; 
+    border: none; 
+    font-size: 1em; 
+    text-align: center; 
+    display: block; 
+    width: 85%; 
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+.navigation { 
+    margin-bottom: 20px; 
+    text-decoration: none; 
+    color: lightgrey ; 
+}
+
+.navigation a {
+    text-decoration: none; 
+    color: black; 
+}
+
+.intro-text {
+    font-size: 1.5em; 
+    margin-bottom: 20px; 
+}
+
+.main-text {
+    font-size: 1em; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+.background-text {
+    margin-bottom: 20px; 
+}
+
+.background-text a {
+    color: maroon; 
+}
+
+.content-image {
+    width: 250px; 
+    max-width: 350px; 
+    float: right; 
+    margin-left: 20px; 
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
