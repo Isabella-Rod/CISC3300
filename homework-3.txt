@@ -1,0 +1,46 @@
+1. What is javascript? How does an interpreted programming language differ from a
+compiled language?
+
+Javascript is a high-level, versatile, lightweight programming language commonly used by web 
+developers to add dynamic interactions to web pages, applications, servers, and even games. It 
+is typically executed within the browser. An interpreted programming language differs 
+from a compiled language by how the source code is not directly translated by the target machine instead a 
+different program such as an interpreter reads and execudes the code at runtime. Some examples 
+of an interpreted programming language are JS, Python, PHP, and bash. In contrast, a compiled language 
+operates that once it is compiled, it is expressed in the instructions of the target machine 
+so this machine code is undecipherable by humans. Some examples of a compiled language are C, C++, and Java. 
+
+2. Contrast dynamically typed programming languages with statically typed ones. And
+contrast strongly typed programming languages with weakly typed ones. (google these)
+
+Dynamically typed programming languages are when type checking is performed at runtime, which 
+means that the type of a variable is allowed to change over its lifetime. Statically typed 
+languages perform type checking at compile time, meaning the type of a variable is known and fixed 
+when the code is compiled. 
+
+Strongly typed programming languages enforce strict rules for type usage, and variables of one type cannot 
+be implicitly converted to another without explicit instruction. In contrast, weakly typed programming 
+languages recognize different data types (numbers,strings, etc.), but doesn't use them too strictly, 
+so allows for more flexible type conversion. These languages often trys to convert data when it seems reasonable. 
+
+3. What is the difference between var, let, and const when declaring variables in JS?
+
+Var, let, and const are used to declare variables in JS, but they differ in scope and behavior.
+    Var is old school, global function scoped, and can be redeclarable or updated. 
+    Let is block scoped, meaning it's limited to the block where it is defined. It can be updated but not redeclarable within the same scope. 
+    Const is also block scoped, but it declares a constant variable that cannot be reassigned. However, for objects and arrays, the contents can be modified, even if the reference cannot be changed.
+
+4. What are anonymous functions? Higher order functions? Callback functions? First class
+functions?
+
+Anonymous functions are functions without a name. 
+High order functions are functions that either take other functions as arguments or return functions. 
+Callback functions are functions passed as an argument into another function, which are then invoked at a later time. 
+First-class functions are a property that treats functions in that language like regular variables, meaning they can be assigned to varriables, passed as arguments, or returned from other functions. 
+
+5. Define objects in JavaScript.
+
+In Javascript, objects are a non primitive data type used to store collections of data and more complex entities. An object is 
+a collection of properties, where each property is defined by a name (or key) and a value. A property's value can be a function, 
+in which case the property is known as a method. Objects are useful for representing real-world entities and organizaing data into 
+related structures. 
