@@ -1,0 +1,57 @@
+1. What is the DOM? What is meant by the DOM tree?
+
+The Document Object Model (DOM) is an application programming interface (API) that defines 
+how browsers should create a model of an HTML page and how Javascript can interact with and modify the 
+contents of a web page while it is displayed in the browser. Essentially, it represents the browser's live rendering of 
+the HTML content. The DOM allows scripts to interact with the current page by accessing and 
+updating elements, attributes, and content. 
+
+When a browser loads a web page, it creates a DOM tree, which is a structured representation of the page 
+stored in the browser's memory. This tree consists of four main types of nodes: the document node, 
+which represents the entire page; element nodes, which correspond to individual HTML elements; attribute nodes,
+which store information about element attributes; and text nodes, which represent the textual content 
+within elements. The DOM can be viewed in a browser's developer tools, allowing developers to inspect and 
+manipulate the structure and content of wed pages in real time. 
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+
+Cross-Site Scripting (XSS) attacks occur when malicious users inject harmful code into web pages
+that are viewed by other users. This can happen when input from a user is treated as HTML and inserted into a page using
+methods like 'innerHTML' or certain JQuery functions. If the injected code runs in other users' 
+browsers, attackers could potentially gain access to sensitive information, such as user accounts. 
+
+To guard against XSS attacks, it's crucial to be cautious with what content is treated as HTML, especially
+when it comes from user input. Ideally, avoid displaying user-provided input as HTML. If it's necessary, 
+ensure you validate it by stripping harmful tags, escaping characters, and sanitizing the content. These measure reduce the 
+risk of running potentially dangerous code. 
+
+3. What is an event in JavaScript?
+
+An event in JavaScript is any action or occurrence that takes place in the browser and can be detected and responded to by JavaScript 
+code. Events can be triggered by user interactions, such as clicking a button, typing in a text field, or moving the mouse, as well as by 
+browser actions, like loading a webpage or resizing a window. JavaScript allows developers to assign "event handlers" to these events, 
+which are functions that execute when the event occurs. This capability enables developers to create interactive and dynamic web applications. 
+Common examples of events include click, submit, keypress, mouseover, and load. By leveraging events, developers can enhance user experience 
+and provide real-time feedback on web pages.
+
+4. How does a DOM eventListener work? What are the parameters it is expecting?
+
+A DOM eventListener is a more recent approach to handling events in JavaScript, allowing you to set up functions that will be called
+whenever a specified event occurs on a target element. This method can manage multiple functions for the same event, providing greater 
+flexibility in event handling. To use an eventListener, you typically call the addEventListener method on a DOM element, specifying the name of the event you want to
+listen for and providing a callback function that defines what should happen when the event is triggered. 
+
+The eventListener method expects at least two parameters: the event type and the callback function to execute when the event occurs. An optional third 
+parameter can also be included to specify options such as whether the event should be captured or not during the event flow. 
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page?
+
+jQuery is a lightweight JavaScript library designed to simplify HTML and DOM manipulation, event handling, CSS animations, and Ajax interactions. 
+It significantly shortens the syntax and simplifies the code, making tasks that would normally require multiple lines of JavaScript achievable with just a 
+single line of jQuery. This makes jQuery especially valuable for improving developer productivity and making code easier to write and understand. 
+
+We use jQuery because it makes common HTML, CSS, and JavaScript tasks simpler and more efficient, reducing the complexity of otherwise repetitive or cumbersome 
+operations. 
+
+To use jQuery on a web page, you can load it through a CDN, similar to how you might load Bootstrap. This allows you to easily include the library
+by adding a script tag that points to the jQuery CDN in your HTML file. 
