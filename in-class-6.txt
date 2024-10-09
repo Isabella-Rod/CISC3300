@@ -1,0 +1,7 @@
+1. AJAX
+2. HTTP (Hyper Text Transfer Portal)
+3. REST
+4. JSON
+5. communicate
+6. hoisting
+7. outer 
