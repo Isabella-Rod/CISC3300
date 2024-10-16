@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Homework 5 Question 6</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        
+        <style> 
+            body { 
+                display: flex; 
+                justify-content: center; 
+                flex-direction: column; 
+                align-items: center; 
+                height: 100vh; 
+                margin: 0; 
+                margin-bottom: 20px; 
+                font-family: Arial, sans-serif; 
+            }
+
+            .weather {
+                font-size: 24px; 
+                text-align: center; 
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1> Current Temperature in NYC </h1>
+        <div class="weather" id="temperature"> </div>
+        
+        <script> 
+
+         $(document).ready(function() {
+            const latitude = 40.7128;
+            const longitude = -74.0060;
+
+        const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+
+        $.ajax({
+            url: apiUrl,
+            method: "GET",
+            success: function(response) {
+                const tempCelsius = response.current_weather.temperature;
+                const tempFahrenheit = (tempCelsius * 9/5) + 32;
+                $('#temperature').text(`Temperature: ${tempFahrenheit.toFixed(2)} °F`);
+            },
+            error: function() {
+                $('#temperature').text('Unable to fetch the temperature');
+            }
+            });
+        });
+
+        </script>
+
+</body>
+
+</html>

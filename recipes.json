@@ -1,19 +1,19 @@
 {
-    "recipes": [
-        {
-            "id": 1,
-            "title": "Birria Tacos",
-            "description": "Beef tacos cooked with a broth and served with consomme."
-        },
-        {
-            "id": 2,
-            "title": "Penne alla Vodka",
-            "description": "Penne pasta with heavy cream, tomato paste, and cheese."
-        },
-        {
-            "id": 3,
-            "title": "Butter Chicken",
-            "description": "Creamy chicken curry with a butter tomato sauce."
-        }
-    ]
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Spaghetti",
+      "ingredients": "Pasta, Tomato Sauce, Garlic, Parmesan, Red Pepper Flakes"
+    },
+    {
+      "id": "2",
+      "name": "Tacos",
+      "ingredients": "Tortillas, Chicken, Cheese, Lettuce, Pico de Gallo, Sour Cream"
+    },
+    {
+      "id": "2",
+      "name": "Chicken Noddle Soup",
+      "ingredients": "Chicken, Carrots, Celery, Noddles, Bone Broth"
+    }
+  ]
 }

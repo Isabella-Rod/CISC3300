@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            justify-content: center; 
+            align-items: center; 
+            display: flex; 
+            flex-direction: column; 
+            background-color: peachpuff; 
+            color: maroon; 
+        }
+        .recipe-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .recipe-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .recipe-form {
+            margin-top: 20px;
+        }
+        .recipe-form input {
+            margin-right: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<h1>Recipes</h1>
+
+<ul id="recipe-list" class="recipe-list"></ul>
+
+<h2>Add a New Recipe</h2>
+<form id="recipe-form" class="recipe-form">
+    <input type="text" id="name" placeholder="Recipe Name" required>
+    <input type="text" id="ingredients" placeholder="Ingredients" required>
+    <button type="submit">Add Recipe</button>
+</form>
+
+<script>
+    $(document).ready(function() {
+        function loadRecipes() {
+            $.ajax({
+                url: "http://localhost:3000/recipes",
+                method: "GET",
+                success: function(recipes) {
+                    $('#recipe-list').empty();
+                    recipes.forEach(recipe => {
+                        $('#recipe-list').append(
+                            `<li>
+                                <strong>${recipe.name}</strong><br>
+                                Ingredients: ${recipe.ingredients}
+                            </li>`
+                        );
+                    });
+                }
+            });
+        }
+
+        loadRecipes();
+
+        $('#recipe-form').submit(function(event) {
+            event.preventDefault();
+
+            const newRecipe = {
+                name: $('#name').val(),
+                ingredients: $('#ingredients').val()
+            };
+
+            $.ajax({
+                url: "http://localhost:3000/recipes",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(newRecipe),
+                success: function() {
+                    $('#name').val('');
+                    $('#ingredients').val('');
+                    loadRecipes();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+1. What is HTTP? What are the different HTTP request methods and how do they differ?
+
+HTTP stands for Hyper Text Transfer Protocol and it is a protocol for fetching resources such as 
+HTML documents or JSON data. It is the foundation of any data exchange on the Web and it is a client-server protocol, 
+which means requests are initiated by the recipient, usually the web broswer. It is how we are going to send and 
+receive data across the internet. HTTP how the internet handles communication between clients 
+and servers, is done by requests and responses. 
+
+The different HTTP request methods consist of GET, POST, PUT, PATCH, and DELETE. Each HTTP request has a method type and 
+each method type has a semantic meaning. GET should only ever retrieve data. While POST submits an entity to the specified resource, 
+often causing a change in state or side effects on the server that creates a new resources. PUT replaces all current representations 
+of the target resource with the request payload which updates everything for a resource. PATCH partiall modifies a resource and lastly,
+DELETE deletes a resource. 
+
+2. What is an API? What is JSON?
+
+An API, which stands for an application programming interface, is a way for two or more computer programs or components to communicate with 
+each other. Many large websites expose thier APIs which allows you to access and update the data on their sites, including 
+Facebook, Google, and Twitter. 
+
+JSON, which stands for JavaScript object notation, is an open standard file format and data interchange format that uses human-readable 
+text to store and transmit data objects consisting of attribute-value pairs and arrays (or other serializable values). It is text data, but JS 
+is ready to parse it into javascript objects and vice versa. The entire internet runs on JSON. 
+
+3. What is AJAX? What is meant by asynchronous code?
+
+AJAX, which stands for Asynchronous JavaScript and XML, allows web pages to be updated asynchonously by exchanging data with a web server behind the 
+scenes. This means that it is possible to update parts of a web page, without reloading the whole page. Browsers have a built in XMLHttpRequest object to allow
+asynchronous requests without reloading the page. 
+
+Asynchronous code means asynchronous programming which is an essential concept in JavaScript that allows your code to run in the background without blocking the
+execution of other code. It basically allows code blocks to execute at a future point in time. With AJAX, you are able to make requests to servers and run code
+with the results of those requests. 
+
+4. What is REST and what are resources? If my application had a concept called posts and
+was designed in a RESTful way, what would the URI and HTTP request method be to:
+    a. retrieve multiple posts
+        URI- /posts
+        HTTP- GET
+    b. retrieve a single post
+        URI- /posts/{id}
+        HTTP- GET
+    c. save a post
+        URI- /posts
+        HTTP- POST
+    d. update a post
+        URI- /posts/{id}
+        HTTP- PUT (or PATCH)
+
+REST is not a protocol or a standard, but an architectural style of organizing our code so that requests act upon resources in a standardized way. Resources are any 
+concept that might be the target of an author's hypertext references. So any information can be named a resorce such as a document or image, a temporal service, a collection 
+of other resources, a non-virtual object, etc. It is a conceptual mapping to a set of entities, not the entity that corresponds to the mapping at any
+particular point in time. REST APIs use Uniform Resource Identifiers (URIs) to address resources. 
+
+5. Define hoisting and closures in JS.
+
+Variables and functions within each execution context are created before they are executed. Hoisting is the preparation phase when you take all of the variables and functions and bring them to the 
+top of the execution context. In other words, you can think of them as having been prepared. Therefore, hoisting occurs in the prepare phase of the execution context when a 
+new scope is created and the variables, functions, and arguments are created and "hoisted" to the top. 
+
+Closures are the ability of a function to remember the variables and functions that are declared in its outer scope. Functions in JavaScript are said to have lexical scope and are
+linked to the object they are defined with. For each execution context, the scope is the current execution context's variable, plus the variables object for each parent execution 
+context, which is called closures. 
