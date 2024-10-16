@@ -1,0 +1,8 @@
+1. .htaccess
+2. <?php> 
+3. $
+4. non primitive data types
+5. associative arrays
+6. double quotes ("")
+7. include for require 
+8. data type
