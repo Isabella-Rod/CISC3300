@@ -1,0 +1,9 @@
+1. templates 
+2. visibility 
+3. inheritance 
+4. namespaces 
+5. super global arrays 
+6. functions 
+7. header()
+8. MVC
+9. libraries 
