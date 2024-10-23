@@ -1,0 +1,37 @@
+1. What is PHP? What do server side languages do in web development?
+
+PHP stands for Hypertext Preprocessor and it is an interpreted programming language used to build webpages. It 
+is widely used in web development and present on 79.2% of all websites. 
+
+Server side languages in web development like PHP process user input and interact with other servers to deliver
+dynamic content, meaning the data can change based on user input or other factors. 
+
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+
+PHP and JavaScript are alike in that both are dynamic, weakly-typed languages, meaning they don't require explicit type declarations for variables. Both also support similar programming fundamentals like 
+variables, loops, and functions. However, the main difference lies in where they are executed. PHP is a server side language, meaining it runs on the server and processes backend tasks, while JavaScript is primarily a client
+side language, meaning it runs in the user's broswer for frontend functionality. Another difference is that PHP is multi-threaded, which allows it to handle multiple tasks at once, making it more suitable for processing multiple 
+user requests simultaneously. JavaScript is single threaded but uses asynchronous programming to handle multiple operations without blocking the main thread. Lastly, arrays in PHP can be associative, meaning they allow key-value 
+pairs, while JavaScript only supports indexed arrays. 
+
+3. Why pick PHP over another server side scripting language?
+
+PHP offers several built-in functionalities that make it well-suited for web development. It's one of the most widely used and opinionated scripting languages, which has led to strong 
+community support and extensive documentation. PHP also excels in simplicity for integrating with databases, making it a stronger contender over alternatives. In short, you pick PHP over 
+another server side language because its easy to learn, widely adopted, integrated with databases and servers, cost efficient, has improved performance, and exists with rich documentation and support. 
+
+4. What’s the difference between the include and require keywords in PHP?
+
+The include and require statements in PHP both take all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. The difference is how they handle missing files. If the file isn't found, 
+include will throw an error but continue running, whereas require will halt execution if the file is not found. There is also include_once and require_once variants that ensure the file is only included once. 
+
+    a. What would happen if you tried to use a variable from a file that hasn’t been included yet?
+
+    If you try to use a variable from a file that hasn't been included yet, PHP will throw an error as the script hasn't yet executed the code from the other file. 
+
+5. Compare and contrast echo and var_dump.
+
+The echo command is used to output text to the browser, often for simple strings or HTML. The var_dump command, on the other hand, is used to display 
+detailed information about one or more variables, including its type and value. It can handle complex data types like non primitive values. 
+
+
