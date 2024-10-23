@@ -1,0 +1,19 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Birria Tacos",
+            "description": "Beef tacos cooked with a broth and served with consomme."
+        },
+        {
+            "id": 2,
+            "title": "Penne alla Vodka",
+            "description": "Penne pasta with heavy cream, tomato paste, and cheese."
+        },
+        {
+            "id": 3,
+            "title": "Butter Chicken",
+            "description": "Creamy chicken curry with a butter tomato sauce."
+        }
+    ]
+}
