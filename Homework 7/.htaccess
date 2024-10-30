@@ -1,7 +1,12 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
+
+# Accept loading of actual files and directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
-RewriteRule ^users.html$ views/Users.html [L]
+
+# Send everything else to the index page
+RewriteRule ^(.*)$ Index.php?url=$1 [L,QSA]
 
 php_flag display_errors On
+</IfModule>
