@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../models/UserModel.php';
+
 class UserController {
     public function showUsersPage() {
         include __DIR__ . '/../views/users.html';
