@@ -1,0 +1,14 @@
+1. URL
+2. $_GET
+3. $_POST
+4. not appear
+5. html syntax
+6. accuracy 
+7. cookie
+8. sessions
+9. Exceptions are specific types of errors that occur 
+during the execution of a program and can be "caught" to 
+handle the error gracefully. In many languages, including PHP, 
+exceptions are objects that carry information about the error, 
+which can be processed using a try-catch block to prevent the 
+program from crashing.
