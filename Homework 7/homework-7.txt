@@ -1,0 +1,50 @@
+1. What is a class? What is an object? What is OOP?
+
+A class is essentially a blueprint or template for creating objects. It defines attributes (properties) and behaviors (methods) 
+that the created objects, also known as instances, will have.
+
+An object is an instance of a class. When a class is defined, no memory is allocated until an object of that class is created. Objects encapsulate 
+data and functionality; they allow us to interact with the data stored within the object using the methods defined in its class.
+
+OOP (Object-Oriented Programming) is a programming paradigm based on the concept of "objects," which can contain data, in the form of fields or 
+attributes, and code, in the form of methods or functions. OOP principles include encapsulation, inheritance, polymorphism, and abstraction, which allow 
+developers to structure software in a way that promotes reusability, scalability, and organized code.
+
+2. Why use an abstract class in OOP?
+
+Abstract classes allow you to create a base class with default behaviors and leave some methods undefined, requiring subclasses to implement those specific methods. This is helpful when 
+multiple classes share a common base of functionality but need specific implementations for certain methods. Abstract classes enable polymorphism, where different classes derived from the 
+same abstract class can be treated as instances of that abstract class, and each can respond in their own way to a common method.
+
+3. What are superglobals in PHP, what are some examples of data they provide?
+
+Superglobals are predefined variables in PHP that are accessible from any scope, incluing within functions and methods, without needing to declare them as global. They are useful for handling 
+input data, server information, session variables, and more. 
+
+Examples: 
+    $_Server: contains information about headers, paths, and script locations 
+    $_GET and $_POST: used to access data sent to the script via HTTP GET or POST requests, respectively, often used to retrieve form data 
+    $_SESSION: stores session variables, which can persist user data across multiple pages 
+
+4. What are the two steps to setting up and using a class via namespaces?
+
+Step 1: Define the namespace at the topp of the file in which the class resides.
+Step 2: In the place we want to use the class, we have two options.
+            Option 1: Reference the class with the fully qualified namespace whenever it's needed ( $postsModel = new app\models\Post(); )
+            Option 2: Use the use keyword to import the class at the top of the file where you need it ( use app\models\Post; ), allowing you to instantiate it without specifying the full path.
+
+5. What is MVC? Detail the different parts.
+
+MVC (Model-View-Controller) is a design pattern that divides an application into three main logical components: Model, View, and Controller, helping developers separate the 
+business, logic, data, and presentation layers. 
+
+    The Model component corresponds to all the data-related logic that the user works with. This can represent either the data that is being transferred between the 
+    View and Controller components or any other business logic-related data. It can add or retrieve data from the database. It responds to the controller's request because 
+    the controller can't interact with the database by itself. The model interacts with the database and gives the required data back to the controller. 
+
+    The Controller is the component that enables the interconnection between the views and the model so it acts as an intermediary. The controller doesn't have to worry about handling 
+    data logic, it just tells the model what to do. It processes all the business logic and incoming requests, manipulates data using the Model component, and interact with the View to 
+    render the final output. The Controller orchestrates the overall flow of data in an application.
+
+    The View component is used for all the UI logic of the application. It generates a user interface for the user. Views are created by the data which is collected by the model 
+    component but these data aren't taken directly but through the controller. It only interacts with the controller. 
