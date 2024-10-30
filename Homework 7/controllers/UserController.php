@@ -3,14 +3,23 @@
 require_once __DIR__ . '/../models/UserModel.php';
 
 class UserController {
+    private $userModel;
+    
+    public function __construct() {
+        $this->userModel = new UserModel();
+    }
+    
     public function showUsersPage() {
-        include __DIR__ . '/../views/users.html';
+        if (file_exists('views/users.html')) {
+            require 'views/users.html';
+        }
     }
 
     public function getUsersJson() {
-        $userModel = new UserModel();
         header('Content-Type: application/json');
-        echo json_encode($userModel->getAllUsers());
+        $data = $this->userModel->getAllUsers();
+        echo json_encode($data);
     }
 }
 ?>
+
