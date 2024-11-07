@@ -1,0 +1,58 @@
+1. Write a query string with 2 values for www.example.com
+
+A query string is a set of characters tacked onto the end of a URL. The query 
+string begins after the question mark (?) and can include one or more parameters. Each 
+parameter is represented by a unique key-value pair or a set of two linked data items. An 
+equals sign (=) separates each key and value. An ampersand (&) separates multiple parameters. 
+
+www.example.com?query1=123&query2=abc
+
+2. What is meant by escaping a character?
+
+Escaping is to make sure nothing is malicious. We don't want to allow hackers to send us malicious code. Escaping data involves 
+removing and replacing any characters that should not appear in a value. Characters that would try to behave like code when we would not 
+want them to for example. 
+
+3. What are the following HTTP status and their meanings:
+    a. 200 - Success/Ok 
+        The HTTP status code 200 represents success which means the page you have requested has been
+        fetched. The action made has been accepted and has been delivered to the client by delivering the 
+        requested page. 
+            GET - entity in reference to the requested source sent to the response 
+            POST - entity describing the response of action made 
+            HEAD - an entity-header field similar to the requested source 
+            TRACE - a request made by the client is taken care of by the server 
+    b. 400 - Bad Request 
+        When the client requests a page and the server is not able to understand anything, it displays a 400 HTTP
+        status code. The client should not repeat the request without any changes. The request can be a malformed, deceptive 
+        request routing, or invalid request. 
+    c. 401 - Unauthorized Error 
+        This HTTP status code requires user authentication. The response includes the WWW-Authenticate header field containing 
+        a challenge applied to a requested source. HTTP access authentication "HTTP Authentication: Basic and Digest Access 
+        Authentication". 
+    d. 403 - Forbidden 
+        The HTTP status code 403 implies that the request is understood by the server, but still refuses to fulfill it. If the request 
+        method was not HEAD and also the server wants to make it public when the request is not completed, it should tell the reason 
+        for the refusal in the entity. 
+    e. 404 - Not Found 
+        404 HTTP status code appears when you request a URL and then the server has not found anything. This happens when the server doesn't wish to 
+        describe the reason why the request has been refused. Also, the server is not able to find a representation for the 
+        target resource. 
+    f. 500 - Not Implemented 
+        When a request is made by the client, the server is not able to recognize the request method and is not able to support any resource. By default, it is 
+        cacheable. The methods, the server requires to support are GET and HEAD. The server does not support the functionality required to 
+        fulfill the request. 
+
+4. Why do we need to validate data?
+
+Data validation checks for the validity of data. Using a set of rules, it checks whether the data is within the acceptable values defined for the field 
+or not. Making sure the data is the right type, optionally not empty, etc. In an example with users we wouldn't want to save a user with no name for example or if it 
+was a number input we wouldn't want a string. We can also use regular expressions. 
+
+5. What are sessions and cookies? What do they do?
+
+Sessions store information about a user and their preferences on the server. They are called sessions because they only store the data for the duration of a single visit 
+to the site. Cookies are also text files. They live in the tmp directory which is in the apache files in MAMP. 
+
+First, we generate a session and a cookie. That cookie has the ability to access our session on each new request which is where we will determine if they are still authenticated, we 
+could revoke the ability to request new data from the backend if needed. We can configure how long both should last, and if a cookie should persist even when a browser is closed. 
