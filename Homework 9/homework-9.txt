@@ -1,0 +1,35 @@
+1. What is SQL? MySQL? What are relational databases?
+
+SQL (Structured Query Language) is a standard language for database creation and manipulation. It is used to
+perform tasks such as querying data, updating records, creating tables, and setting permissions. MySQL is a 
+relational database program (one of many) that uses SQL queries. It is commonly used for web development and data storage. 
+A relational database is a database that store data in tables (relations) where each table consists of rows and columns. It uses a structure that allows 
+us to identify and access data in relation to another piece of data in the database, these are called relationships. Tables can 
+be linked using relationships based on keys. 
+
+2. What is normalization in SQL?
+
+Normalization in SQL is the process of organizing data in a database to minimize redundancy and improve data integrity. It avoids duplication by using 
+relationships. Normalization organizes the columns and tables of a database to ensure that database integrity constrains properly execute their 
+dependencies. We use relationships so that our data can scale and be normalized. 
+
+3. What are primary and foreign keys?
+
+Primary keys are a unique identifier for each record in a table. It ensures that no two rows can have the same value in the primary key column, and it cannot
+be null. It is the first column and is used to identify that row. 
+
+Foreign keys are the primary key of a row in a diffrent table related to the current table. It is a field in one table that links to the primary key of another 
+table. It is used to establish and enforce a relationship between two tables. 
+
+4. What are the three relationship types?
+
+The three relationship types consist of one-to-one, one-to-many, and many-to-many. One-to-one is for every record in the primary table, there is 
+one and only one record in the foreign table. One-to-many is for every record in the primary table, there are one or more related records in the foreign 
+table. Many-to-many is for every record in the primary table, there are many related records in the foreign table, and for every record in the foreign table, 
+there are many related records in the primary table. 
+
+5. What is the difference between a left join and an inner join?
+
+A left join returns all records from the left table and the matching records from the right table. 
+
+An inner join selects records that have matching values in both tables. 
