@@ -1,0 +1,10 @@
+1. PDOs (PHP data objects) 
+2. DSN (Data Source Name)
+3. .env 
+4. ignore
+5. statement 
+6. fetch 
+7. fetch all
+8. prepared statement 
+9. colons 
+10. SQL injection hack 
