@@ -1,0 +1,46 @@
+1. What are PDOs? What is a DSN?
+
+PODs are a built in class that comes packaged with PHP to make it very easy for you to interact 
+with databases. It represents and manages the connection to the database. We set up a connection and then 
+run queries through it. Via PDOs PHP is going to take sql as input and return results from the database and store it 
+in a variables. 
+
+A DSN (Data Source Name) is a string we instantiate PDO objects with which represents the connection 
+to our database. The data source name (DSN) is a string that contains information about our connection. These should come from an 
+.env file, one not sent to github. 
+
+2. What are .env files? What are .gitignore files?
+
+A .env file is a file containing environment variables. An environment variable is a variable whose value is set outside 
+the program, typically through a functionality built into the operating system. A .env file will exist in the 
+environment (OS) we are running our application on and set variables specific to the environment. 
+
+A .gitignore file is a text file that tells Git which files or folders to ignore in a project, we will need git to ignore our 
+.env file. 
+
+3. Should you ever upload passwords of any kind to github?
+
+No, you should never upload passwords or any sensitive credentials to github or any public version control system. 
+
+4. What is SQL injection?
+
+A SQL injection hack is when a hacker tries to run malicious sql code in a database. We should always use prepared statements with 
+parameters being run in sql, otherwise we are susceptible to injection attacks. Preparing statements will automatically run escaping functions on the parameters
+about to be used. 
+
+5. What are prepared statements? How can we pass variables to a prepared statement?
+
+A prepared statement is a parameterized and reusable SQL query which forces the developer to write the SQL command and the 
+user-provided data separately. The SQl command is executed safely, preventing SQL injection vulnerabilities. 
+
+We can pass variables to a prepared statement using named parameters and the execute method through these steps:
+    Prepare the statement with named parameters:
+        We create the SQL query and use named placeholders prefixed with colons (:) for dynamic values. Here, :name is a named parameter that we will bind a value to later. 
+            Example : $stmt = $pdo->prepare("SELECT * FROM users WHERE CONCAT(firstName, ' ', lastName) LIKE :name"); 
+    
+    Execute with an associative array: 
+        We call the execute() method and pass an associative array where the keys match the named parameters in the prepared statement, and the values are the variables 
+        we want to use in the query. 
+            Example: $searchValue = '%Isabella Rodrigues%'; 
+                    $stmt->execute([':name' => $searchValue]); 
+        In this case, ':name' correspods to the named parameter in the query, and $searchValue is the value we want to bind. 
